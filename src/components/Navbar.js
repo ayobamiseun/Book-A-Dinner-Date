@@ -46,7 +46,7 @@ export default function Navbar() {
       <li href className="items">Menu</li>
       <li className="items">Events</li>
       <li className="items">Gallery</li>
-      <li className="items">Chefs</li>
+      <li className="items"><Link to="/about">About</Link></li>
       <li className="items"><Link to="/contact">Contact</Link></li>
       <Link to="/"><li className="items">Home</li></Link>
       

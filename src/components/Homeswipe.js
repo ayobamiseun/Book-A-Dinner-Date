@@ -71,13 +71,13 @@ export default function App() {
         effect={"fade"}
         navigation={false}
         autoplay={{
-          delay: 5000,
+          delay: 2500,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
-        modules={[EffectFade, Navigation, Pagination]}
+        modules={[EffectFade, Autoplay, Navigation, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>

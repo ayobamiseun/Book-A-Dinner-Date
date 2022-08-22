@@ -2,6 +2,7 @@ import React from 'react'
 import  './App.css';
 import Home from './Home'
 import Contact from './components/Contact';
+import Abt from './components/About2';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 
@@ -22,6 +23,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/about" element={<Abt />} />
       <Route path="contact" element={<Contact />}>
         {/* <Route path="me" element={<OwnUserProfile />} />
         <Route path=":id" element={<UserProfile />} /> */}

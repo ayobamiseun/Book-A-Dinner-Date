@@ -30,12 +30,8 @@ const Container = styled.div`
 export class SliderText extends Component {
   render() {
     return (
-      <div 
-      
-      >
-      <Container
-      
-      >
+      <div>
+      <Container>
            <Button 
      >Contained1</Button>
       </Container>

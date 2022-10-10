@@ -5,7 +5,7 @@ nav {
      
 }
 .header {
-    background: rgba(0, 0, 0, 0.2);
+    /* background: #0693E3; */
     z-index:100000;
     position: fixed;
      top: 0;

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import './Navbar.css'
+import './Navbar.css';
+import {Animated} from "react-animated-css";
 import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import {
   
@@ -33,7 +34,8 @@ export default function Navbar() {
   return ( 
   <>
   
-<div className='header'>
+  <Animated animationInDuration={3000} animationOutDuration={6000} animationIn="fadeInDown"  animationOut="bouceOut" isVisible={true}>
+  <div className='header'>
 <h3 className='all'>Ayobami</h3>
     <nav>
     
@@ -58,6 +60,9 @@ export default function Navbar() {
    
 </div>
     
+                      </Animated>
+  
+
     </>
   )
 }

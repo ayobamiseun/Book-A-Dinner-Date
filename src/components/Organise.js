@@ -76,7 +76,7 @@ body {
 .orgb{
     width:100%;
     background:red;
-    background-image:url('${process.env.PUBLIC_URL+ "../../gallery/gallery-4.jpg"}');
+    ${'' /* background-image:url('${process.env.PUBLIC_URL+ "../../gallery/gallery-4.jpg"}'); */}
     ${'' /* background-color:red;
     position:absolute;
     z-index:10000; */}
@@ -118,7 +118,7 @@ ${'' /* .orgb::before {
   margin: 15px 0 0 0;
   font-size: 32px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
    font-family: "Poppins", sans-serif;
 }
 .section-title h2 span {
@@ -133,6 +133,7 @@ ${'' /* .orgb::before {
     width: 50%;
   }
 }
+
 .swiper-pagination {
     position: initial;
     text-align: center;
@@ -182,26 +183,26 @@ ${'' /* .orgb::before {
 .events .event-item p:last-child {
   margin-bottom: 0;
 }
-.show .fst-italic {
+#show .fst-italic {
     font-size:19px;
 }
-.show  ul {
+ #show  ul {
     font-size: 18px;
   padding-right: 4px;
-  color: #fff;
+  color: #000;
    font-family: "Poppins", sans-serif;
 }
-.show  p {
+ #show  p {
     font-size: 18px;
   padding-right: 4px;
-  color: #fff;
+  color: #000;
    font-family: "Poppins", sans-serif;
 }
-.show p {
+#show p {
     display:flex;
   margin-left:20px;
 }
-.show h3 {
+#show h3 {
     font-weight: 600;
   font-size: 26px;
   color: #ffb03b;
@@ -209,18 +210,26 @@ ${'' /* .orgb::before {
   margin:20px;
   margin-top: 0;
 }
-.show  .ul i {
+#show  .ul i {
     font-size: 20px;
   padding-right: 4px;
   color: #ffb03b;
 }
+@media (max-width: 600px) {
+ #show ul  {
+    font-size: 12px;
+  }
+  #show  p {
+    font-size:12px;
+  }
+}
 @media (max-width: 1024px) {
-	 .show {
+	 #show {
         flex-flow: row wrap;
 		 ${'' /* flex-grow: 0; */}
 	} }
     @media (max-width: 768px) {
-	 .show {
+	 #show {
 		 justify-content: center;
 	}
 }`
@@ -231,7 +240,7 @@ export default function Orga() {
     <>
      <Organ className="orgb">
      <div class="section-title">
-          <h2>Organize Your <span>Events</span> in our Restaurant</h2>
+          <h2 color="black">Organize Your <span>Events</span> in our Restaurant</h2>
         </div>
       <Swiper
         spaceBetween={30}
@@ -249,7 +258,7 @@ export default function Orga() {
       >
      <div className="or">
      <SwiperSlide>
-        <div className="show">
+        <div className="show" id="show">
             <div> <img src={`${process.env.PUBLIC_URL+ "../../gallery/event-custom.jpg"}`}alt="Plant 6" className="item__image"/></div>
             <div> 
             <h3>Custom Parties</h3>
@@ -257,8 +266,7 @@ export default function Orga() {
                     <p><span>$99</span></p>
                   </div>
                   <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                   </p>
                   <ul className="ul">
                     <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
@@ -275,7 +283,7 @@ export default function Orga() {
       
      <div className="or">
      <SwiperSlide>
-        <div className="show">
+        <div className="show" id="show">
             <div> <img src={`${process.env.PUBLIC_URL+ "../../gallery/event-birthday.jpg"}`}alt="Plant 6" className="item__image"/></div>
             <div> 
             <h3>Birthday Parties</h3>
@@ -283,8 +291,7 @@ export default function Orga() {
                     <p><span>$99</span></p>
                   </div>
                   <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  
                   </p>
                   <ul>
                     <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
@@ -300,7 +307,7 @@ export default function Orga() {
      </div>
      <div className="or">
      <SwiperSlide>
-        <div className="show">
+        <div className="show" id="show">
             <div> <img src={`${process.env.PUBLIC_URL+ "../../gallery/event-private.jpg"}`}alt="Plant 6" className="item__image"/></div>
             <div> 
             <h3>Private Events</h3>
@@ -308,8 +315,7 @@ export default function Orga() {
                     <p><span>$99</span></p>
                   </div>
                   <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  
                   </p>
                   <ul>
                     <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>

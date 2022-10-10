@@ -6,6 +6,7 @@ import Slide from './Slide'
 import Arrow from './Arrow'
 import Dots from './Dots'
 import Text from './SliderText'
+import {Animated} from "react-animated-css";
 
 const getWidth = () => window.innerWidth
 
@@ -153,8 +154,10 @@ const Slider = props => {
           <Slide width={getWidth()} key={_slide + i} content={_slide} />
         ))}
       </SliderContent>
-     
-     <Text />
+      <Animated animationIn="lightSpeedIn" animationOut="zoomOutDown" animationInDuration={3000} animationOutDuration={3000} isVisible={true}>
+      <Text />
+</Animated>
+    
       <Arrow direction="left" handleClick={prevSlide} />
       <Arrow direction="right" handleClick={nextSlide} />
 
